@@ -1,0 +1,15 @@
+1. This solution has O(logN)  time because it is recursively going through the loop in order to see if there are any matches in the array with the value that it was comparing against. 
+
+for (int i = 0; i < length; i++){
+			if (root.data == value){
+				count++;
+				compares++;
+				root = root.next;
+				
+			}
+			if (root.next!= null){
+				break;
+			}
+			root = root.next;
+			compares++;
+		}

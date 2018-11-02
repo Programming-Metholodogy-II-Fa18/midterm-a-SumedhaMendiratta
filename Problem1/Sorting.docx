@@ -1,0 +1,15 @@
+1. The time complexity of the sort that I wrote is O(n^2). Quicksort fulfills the time complexity of O(nlogn) because the sort is being called recursively.It is a stable sort because a number that is higher than the numbe r next to it will never bypass it, thus making it a stable sort. 
+ 	for (int i = 0; i < size -1; i ++){
+			for (int j = 0; j < size -1 - i; j++){
+				if (a[j]> a[j+1]){
+					int temp = a[j];
+					a[j]= a[j+1];
+					a[j+1] = temp;
+				}
+
+
+
+
+2. The best time complexity of quicksort is O(nlogn). This is because it is being called recursively so even if it is completely in order it will still be called recursively at least once. 
+
+3. The worse time complexity of quicksort is also O(nlogn) assuming that the arary is completely unsorted and needs to be called recursively multiple times. 

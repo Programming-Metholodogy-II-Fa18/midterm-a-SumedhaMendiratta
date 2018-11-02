@@ -1,0 +1,48 @@
+1. Remove has O(1) time because it is simply taking the last element, returning it and then setting the .next of the second to last element to null to make it the last element. 
+
+int remove(){
+		length--;
+		while (root.next!= null){
+			root = root.next;
+		}
+		int temp = root.data;
+		root.prev.next = null;
+		return temp;
+		
+	}
+
+
+
+getValue(index i) also have a O(1) time because it is going through the for loop  in order to reach index i and then printing out the value at that index.
+if(index > length){
+			return -1;
+		}
+		else{
+			for (int i = 0; i < index-1; i++){
+				root  = root.next;
+			}
+			int value = root.data;
+			System.out.println(value);
+			return value;
+		}
+2. Add uses O(n) time because it is a linear process to add a number to the linked list. It simply checks if the root is at the end of the list, if it is not, then it keeps iterating it until it reaches the last element and then changes the .next to equal the new temp Data that was created so that temp is now the last element in the data structure. 
+
+
+		length++;
+		Data temp  = new Data();
+		temp.data = a;
+		
+		if ((length -1) == 0){
+			root = temp;
+			return;
+		}
+		else {
+			int j = 0;
+			while (root.next !=  null){
+			root = root.next;
+		}
+		
+		temp.prev = root;
+		root.next = prev;
+		}
+		
